@@ -1,0 +1,15 @@
+  const { values, errors, bindField, isValid, setInitialValues, checkErrors } = useForm({
+    validations: {
+      email: {
+        pattern: {
+          value: patterns.email,
+          message: 'Please enter valid email address.',
+        },
+        required: true,
+      },
+      password: {
+        minLength: 6,
+        required: true,
+      },
+    },
+  });
